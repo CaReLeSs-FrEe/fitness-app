@@ -8,3 +8,9 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+
+app.get('/', (req, res) => {
+    res.render('Home.hbs');
+});
+
+app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
